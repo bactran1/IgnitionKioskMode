@@ -1,0 +1,15 @@
+# Service to start Chromium Kiosk mode
+
+[Unit]
+Description=Ignition Service with Chromium browser
+
+[Service]
+ExecStart=/home/cse/StartIgnition.sh
+Type=simple
+Restart=always
+RemainAfterExit=yes
+KillMode=process
+TimeoutSec=60
+
+[Install]
+WantedBy=multi-user.target
